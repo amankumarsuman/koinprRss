@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import HandpickedHeader from './components/header/HandpickedHeader';
+import Desktop from './components/desktop/Desktop';
+import { Route, Routes } from 'react-router-dom';
+import NewsPopup from './components/desktop/NewsPopup';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    < >
+        <HandpickedHeader/>
+
+        <Routes>
+          <Route  path="/" exact element={
+        <Desktop/>
+
+          } />
+          <Route  path="/news"  exact element={
+        <NewsPopup/>
+
+          } />
+        </Routes>
+          {/* <NewsPopup/> */}
+    
+    </>
   );
 }
 
