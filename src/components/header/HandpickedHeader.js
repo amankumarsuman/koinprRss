@@ -20,6 +20,7 @@ import {
 } from "@mui/material";
 
 import { memo } from "react";
+import { Link } from "react-router-dom";
 // import { snackbarNotification } from "../../redux/snackbar.action";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -56,12 +57,15 @@ const location=window.location.href
     <>
       <div className="hidden md:block lg:block">
         <Paper elevation={3} className="Header" style={{backgroundColor:"white",color:"black"}} >
+          <Link style={{textDecoration:"none",color:"black"}} to="/">
+          
           <div className="left">
             <span className="heading">Koinpr</span>
             <span className="subHeading">
               A <b>Todayq</b> Product
             </span>
           </div>
+          </Link>
         
       <div className="right">
       <span className="myAccount">Download App</span>
