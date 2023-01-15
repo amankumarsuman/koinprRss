@@ -5,7 +5,85 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import image1 from "../assets/image.png"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useParams } from 'react-router-dom';
+import axios from '../axios/axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
+// import parcer from "parser"
 function NewsPopup() {
+
+    const {id}= useParams();
+    // const url=URLSearchParams()
+    console.log(id,"id")
+const [newsData,setNewsdata]=useState()
+
+const getNewsData=()=>{
+    axios.get("/api/handpicked",{
+        headers:{
+          token:"koinpratodayqproductrsstoken"
+        }
+      }).then((res)=>{
+        // console.log(res)
+        if(res?.status===200){
+            const length=res.data?.handpickedData.length
+            if(id==="newsOne"){
+
+                setNewsdata(res.data?.handpickedData[length-1].news[0].link)
+            }
+            else if(id==="newsTwo"){
+
+                setNewsdata(res.data?.handpickedData[length-1].news[1].link)
+            }
+            else if(id==="newsThree"){
+
+                setNewsdata(res.data?.handpickedData[length-1].news[2].link)
+            }
+            else if(id==="newsFour"){
+
+                setNewsdata(res.data?.handpickedData[length-1].news[3].link)
+            }
+            else if(id==="newsFive"){
+
+                setNewsdata(res.data?.handpickedData[length-1].news[4].link)
+            }
+        }
+    })
+}
+
+useEffect(()=>{
+    getNewsData()
+},[id])
+
+
+// async function fetchRssFeed(feedUrl) {
+//     // console.log(el)
+//     // rssLink.push(el.link))
+//     let feed = await parcer.parseURL(feedUrl);
+//     return feed.items.map((item) => {
+//       // console.log(item)
+//       // if(item?.categories.includes(categoryParam)){
+//       //   return
+//       // }
+//       return {
+//         title: item.title,
+//         link: item.link,
+//         date: item.pubDate,
+//         content:item.content,
+//         category:item.categories,
+//         creator:item.creator,
+//         summary:item.summary,
+//         contentSnippet:item.contentSnippet,
+//         enclosure:item?.enclosure,
+//         id:item?.guid
+  
+//         //websitename
+//         //
+//       };
+//     });
+//   }
+
+console.log(newsData,"newsData")
     return (
         <div>
 
@@ -40,7 +118,7 @@ function NewsPopup() {
                     </div>
                 </div>
                 <div style={{ width: "80%", margin: "auto", height: "90vh", background: "white" }}>
-                    News will be shown here
+                {newsData}
                 </div>
             </div>
         </div>

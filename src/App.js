@@ -19,6 +19,8 @@ function App() {
         <NewsPopup/>
 
           } />
+          <Route path="/news/:id" exact element={<NewsPopup />} />
+
         </Routes>
           {/* <NewsPopup/> */}
     
