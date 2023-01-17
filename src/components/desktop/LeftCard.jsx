@@ -11,8 +11,9 @@ import { Divider, Paper } from "@mui/material";
 export default function DesktopLeftPaper({data}) {
   const [expanded, setExpanded] = React.useState(false);
 console.log(data,data.length)
+const time=data[data?.length-1]?.lastUpdated?.split(" ");
   return (
-    <Paper sx={{ width: "449px", padding: "39px" }}>
+    <Paper sx={{ width: "449px", padding: "39px",marginLeft:"72px" }} elevation={0}>
       <Typography
         sx={{
           // width: "340px",
@@ -21,8 +22,9 @@ console.log(data,data.length)
           fontWeight: 700,
         }}
       >
-        Hands Picked |
-         {data[4]?.date}
+        {/* Hands Picked | {time} */}
+        {data[data.length-1]?.title} | {time&&time[4]},{time&&time[5]}
+        
         <Divider />
         <div style={{ marginTop: "35px" }}>
           <img 
