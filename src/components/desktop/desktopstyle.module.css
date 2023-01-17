@@ -43,15 +43,110 @@
             
         
 }
+.mainPaper{
+ /* width: "449px"; */
+ width: 449px;
+ padding: 39px;
+ margin-left:72px;
+
+}
+.heading{
+
+        width: 202px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-left: 11px;
+  
+}
+.handpickedHeadings{
+     /* width: 340px; */
+   margin: auto;
+    font-size: 19px;
+    font-weight: 700 !important;
+}
+.subHead{
+    width: 202px;
+    font-size: 9px;
+    font-weight: 500 !important;
+    margin-left: 11px;
+    color: #AAAAAA;
+}
 
 @media screen and (max-width: 540px) {
     .mainDiv {
-
+display: flex;
+flex-direction: column;
         width: 95%;
         margin: auto;
         margin-top: 55px;
-        display: grid;
+        /* display: grid; */
+
 
 
     }
+    .leftPaper {
+
+        width: 90% !important;
+        margin: auto;
+        margin-left: 2em !important;
+        margin-top: 2em;
+      
+    }
+    .mainPaper{
+        width: 70% !important;
+        margin: auto;
+        margin-left: 2em !important;
+       
+    }
+    .handPickedTypo{
+    
+                
+        width: 250px !important;
+            margin-top: 28px !important;
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            margin-bottom: 17px !important;
+            margin-left: 38px !important;
+   
+
+}
+.heading{
+
+    width: 180px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 11px;
+    /* border: 1px solid red; */
+
+}
+.typo{
+                
+    font-size: 15px !important;
+        font-weight: 500 !important;
+
+
+}
+.handpickedHeadings{
+    width: 300px;
+  margin: auto;
+   font-size: 20px;
+   font-weight: 600 !important;
+   /* border: 1px solid green; */
+
+}
+.subHead{
+    width: 150px;
+    margin: auto;
+    font-size: 9px;
+    font-weight: 500 !important;
+    margin-left: 11px;
+    margin-top: -10px;
+    color: #AAAAAA;
+}
+.image{
+    width:40% !important;
+    height:50% !important;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
 }

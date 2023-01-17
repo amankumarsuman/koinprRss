@@ -261,6 +261,9 @@ console.log(rssFeed,"rssFeed")
                {"Load More News ->"}
             </span>
           </div>
+
+          <Box sx={{ display: { xs: 'none', md: 'block'} }}>
+
         <Box
           sx={{
             width: "100%",
@@ -305,6 +308,7 @@ console.log(rssFeed,"rssFeed")
         ) : tabValue === 4 ? (
           <CategoryWiseNews data={cbdcData} />
         ) : null}
+          </Box>
       </Paper>
     </div>
   );

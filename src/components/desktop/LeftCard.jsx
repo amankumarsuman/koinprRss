@@ -13,14 +13,10 @@ export default function DesktopLeftPaper({data}) {
 console.log(data,data.length)
 const time=data[data?.length-1]?.lastUpdated?.split(" ");
   return (
-    <Paper sx={{ width: "449px", padding: "39px",marginLeft:"72px" }} elevation={0}>
+    <Paper className={styles.mainPaper} elevation={0}>
       <Typography
-        sx={{
-          // width: "340px",
-          margin: "auto",
-          fontSize: "19px",
-          fontWeight: 700,
-        }}
+     
+        className={styles.handpickedHeadings}
       >
         {/* Hands Picked | {time} */}
         {data[data.length-1]?.title} | {time&&time[4]},{time&&time[5]}
