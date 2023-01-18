@@ -68,8 +68,8 @@ const location=window.location.href
           </Link>
         
       <div className="right">
-      <span className="myAccount">Download App</span>
-      <span className="myAccount">Submit PR</span>
+      <span className="download">Download App</span>
+      <span className="submitpr">Submit PR</span>
 
 </div>
         </Paper>

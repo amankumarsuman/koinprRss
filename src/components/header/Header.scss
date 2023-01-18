@@ -38,7 +38,7 @@
         margin-top: 5px;
         align-items: center;
         
-        .myAccount{
+        .download{
             position: relative;      
             
             .dropdown{
@@ -126,6 +126,67 @@
     }
 }
 @media screen and (max-width: 540px) {
+
+    .Header{
+        height: 74px;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 44px;
+    width: 100% !important;
+        .left{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+    
+            .heading{
+                font-size: 26px;
+                font-weight: 600;
+                font-family: Inter;
+            }
+    
+            .subHeading{
+                margin-left: 18px;
+                font-size: 10px;
+                font-weight: 400;
+                margin-top: 3px;
+                width: 100px;
+                // border: 1px solid green;
+
+            }
+        }
+        // .left:hover{
+        //     cu
+        // }
+    
+        .right{
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            gap: 0 !important;
+            margin-top: 5px;
+            align-items: center;
+            
+            .download{
+                // position: relative;      
+                // border: 1px solid red;
+                width: 100px;
+                // margin-left: 20px;
+                font-size: 12px;
+             
+            }
+          
+            .submitpr{
+                // border: 1px solid red;
+                width: 100px;
+                margin-left: 20px;
+                font-size: 12px;
+            }
+        }
+    }
 .popups {
     // padding: 40px 60px;
     padding: 10px 10px;
@@ -143,7 +204,7 @@
         }
  .paragraph{
             // width: 90%;
-            border: 1px solid red;
+            // border: 1px solid red;
         }
         .inputs {
             margin-top: 42px;
