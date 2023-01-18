@@ -5,13 +5,14 @@ import styles from "./desktopstyle.module.css";
 function RightCard({ image, heading, subheader, date, time, alt }) {
   return (
     <div
-      style={{
-        marginTop: "38px",
-        marginLeft: "38px",
-        marginBottom: "35px",
-        marginRight: "21px",
+      // style={{
+      //   marginTop: "38px",
+      //   marginLeft: "38px",
+      //   marginBottom: "35px",
+      //   marginRight: "21px",
 
-      }}
+      // }}
+      className={styles.rightCardContainer}
     >
       <div style={{ display: "flex" }}>
         <img src={image} alt={alt} className={styles.image} />

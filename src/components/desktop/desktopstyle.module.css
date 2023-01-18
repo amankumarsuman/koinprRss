@@ -71,7 +71,12 @@
     margin-left: 11px;
     color: #AAAAAA;
 }
-
+.rightCardContainer{
+    margin-top: 38px !important;
+    margin-left: 38px !important;
+    margin-bottom: 35px !important;
+    margin-right: 21px !important;
+}
 @media screen and (max-width: 540px) {
     .mainDiv {
 display: flex;
@@ -80,22 +85,25 @@ flex-direction: column;
         margin: auto;
         margin-top: 55px;
         /* display: grid; */
-
+/* border: 1px solid red; */
 
 
     }
     .leftPaper {
 
-        width: 90% !important;
-        margin: auto;
-        margin-left: 2em !important;
+        width: 93% !important;
+        /* margin: auto; */
+        margin-left: 15px !important;
         margin-top: 2em;
+/* border: 1px solid red; */
       
     }
     .mainPaper{
         width: 70% !important;
         margin: auto;
-        margin-left: 2em !important;
+        /* margin-left: 2em !important; */
+/* border: 1px solid green; */
+
        
     }
     .handPickedTypo{
@@ -112,10 +120,10 @@ flex-direction: column;
 }
 .heading{
 
-    width: 180px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-left: 11px;
+    width: 170px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 8px;
     /* border: 1px solid red; */
 
 }
@@ -129,7 +137,7 @@ flex-direction: column;
 .handpickedHeadings{
     width: 300px;
   margin: auto;
-   font-size: 20px;
+   font-size: 14px;
    font-weight: 600 !important;
    /* border: 1px solid green; */
 
@@ -148,5 +156,13 @@ flex-direction: column;
     height:50% !important;
     /* border: 1px solid red; */
     margin-top: 10px;
+}
+.rightCardContainer{
+    margin-top: 28px !important;
+    margin-left: 28px !important;
+    margin-bottom: 0 !important;
+    margin-right: 21px !important;
+    /* margin-left: 0 !important; */
+    /* border: 1px solid green; */
 }
 }

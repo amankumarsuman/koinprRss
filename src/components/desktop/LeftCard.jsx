@@ -16,17 +16,23 @@ const time=data[data?.length-1]?.lastUpdated?.split(" ");
     <Paper className={styles.mainPaper} elevation={0}>
       <Typography
      
-        className={styles.handpickedHeadings}
+        // className={styles.handpickedHeadings}
       >
         {/* Hands Picked | {time} */}
-        {data[data.length-1]?.title} | {time&&time[4]},{time&&time[5]}
+        <span
+        className={styles.handpickedHeadings}
         
-        <Divider />
+        >
+
+        {data[data.length-1]?.title} | {time&&time[4]},{time&&time[5]}
+        </span>
+        
+        <Divider  />
         <div style={{ marginTop: "35px" }}>
           <img 
           // src={`http://localhost:5000/${data[4]?.image}`}
           src={image}
-          width="100%"
+          width="90%"
            />
         </div>
       </Typography>
