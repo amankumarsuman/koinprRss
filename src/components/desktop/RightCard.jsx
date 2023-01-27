@@ -3,6 +3,10 @@ import React from "react";
 import styles from "./desktopstyle.module.css";
 
 function RightCard({ image, heading, subheader, date, time, alt }) {
+
+  const handleClick=(link)=>{
+    
+  }
   return (
     <div
       // style={{
@@ -12,6 +16,7 @@ function RightCard({ image, heading, subheader, date, time, alt }) {
       //   marginRight: "21px",
 
       // }}
+      onClick={()=>handleClick(heading)}
       className={styles.rightCardContainer}
     >
       <div style={{ display: "flex" }}>
