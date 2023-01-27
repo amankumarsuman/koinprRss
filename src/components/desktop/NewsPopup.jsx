@@ -118,7 +118,8 @@ console.log(newsData,"newsData")
                     </div>
                 </div>
                 <div style={{ width: "80%", margin: "auto", height: "90vh", background: "white" }}>
-                {newsData}
+                {/* {newsData} */}
+                <iframe src={newsData} frameborder="0" width="100%" height="100%" ></iframe>
                 </div>
             </div>
         </div>

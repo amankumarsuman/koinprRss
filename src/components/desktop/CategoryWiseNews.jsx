@@ -6,7 +6,7 @@ import image4 from "../assets/Right4.png";
 function CategoryWiseNews({data}) {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(4);
-  
+  console.log(data,"data")
     const handleChangePage = (event, newPage) => {
       setPage(page+1);
     };
@@ -30,7 +30,7 @@ function CategoryWiseNews({data}) {
                 subheader={item?.creator}
                 // date={"23 Nov, 2022"}
             date={`${item?.date.split(" ")[2]} ${item?.date.split(" ")[1]}, ${item?.date.split(" ")[3]}`}
-
+link={data?.link}
                 time={item?.date.split(" ")[4]}
                 image={image4}
               />

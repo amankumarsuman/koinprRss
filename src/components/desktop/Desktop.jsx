@@ -208,7 +208,7 @@ console.log(rssFeed,"rssFeed")
             date={`${item?.date.split(" ")[2]} ${item?.date.split(" ")[1]}, ${item?.date.split(" ")[3]}`}
 
                 time={item?.date.split(" ")[4]}
-
+link={item?.link}
               image={image1}
             />
           </Grid>

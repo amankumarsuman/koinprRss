@@ -2,10 +2,12 @@ import { style } from "@mui/system";
 import React from "react";
 import styles from "./desktopstyle.module.css";
 
-function RightCard({ image, heading, subheader, date, time, alt }) {
-
+function RightCard({ image, heading, subheader, date, time, alt,link }) {
+  console.log(link,"link")
   const handleClick=(link)=>{
-    
+   
+      window.open(link, "_blank", "noopener,noreferrer");
+  
   }
   return (
     <div
@@ -16,7 +18,8 @@ function RightCard({ image, heading, subheader, date, time, alt }) {
       //   marginRight: "21px",
 
       // }}
-      onClick={()=>handleClick(heading)}
+      onClick={()=>handleClick(link)}
+      style={{cursor:"pointer"}}
       className={styles.rightCardContainer}
     >
       <div style={{ display: "flex" }}>
